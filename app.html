@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Job Application Form">
+    <title>Job Application Form</title>
+
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Job Application Form</h2>
+        
+        <form action="submit-application.php" method="post" enctype="multipart/form-data">
+            <!-- Personal Information Fieldset -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </fieldset>
+
+            <!-- Job Preferences Fieldset -->
+            <fieldset>
+                <legend>Job Preferences</legend>
+                <label for="position">Position Applying For:</label>
+                <select id="position" name="position" required>
+                    <option value="software-engineer">Software Engineer</option>
+                    <option value="project-manager">Project Manager</option>
+                    <option value="data-analyst">Data Analyst</option>
+                </select>
+
+                <label for="resume">Upload Resume:</label>
+                <input type="file" id="resume" name="resume" accept=".pdf, .doc, .docx" required>
+            </fieldset>
+
+            <!-- Additional Information Fieldset -->
+            <fieldset>
+                <legend>Additional Information</legend>
+                <label for="cover-letter">Cover Letter:</label>
+                <textarea id="cover-letter" name="cover-letter" rows="5"></textarea>
+
+                <label for="experience">Years of Experience:</label>
+                <input type="number" id="experience" name="experience" min="0" required>
+
+                <label>Application Progress:</label>
+                <progress value="50" max="100">50%</progress>
+            </fieldset>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+
+</body>
+</html>
